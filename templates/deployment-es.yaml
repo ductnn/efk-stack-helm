@@ -27,6 +27,8 @@ spec:
         - env:
             - name: discovery.type
               value: single-node
+            - name: ES_JAVA_OPTS
+              value: "-Xms512m -Xmx512m"
           image: "{{ .Values.elasticsearch.image.repository }}:{{ .Values.elasticsearch.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.elasticsearch.image.pullPolicy }}
           name: elasticsearch
