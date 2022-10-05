@@ -1,0 +1,89 @@
+# Elasticsearch
+elasticsearch:
+  # replicaCount: 1
+
+  image:
+    repository: docker.elastic.co/elasticsearch/elasticsearch
+    pullPolicy: Always
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: "7.13.1"
+
+  # service:
+  #   type: ClusterIP
+  #   port: 9200
+
+  # resources:
+  #   # We usually recommend not to specify default resources and to leave this as a conscious
+  #   # choice for the user. This also increases chances charts run on environments with little
+  #   # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  #   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  #   limits:
+  #     cpu: 100m
+  #     memory: 128Mi
+  #   requests:
+  #     cpu: 100m
+  #     memory: 128Mi
+
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+
+# Kibana
+kibana:
+  # replicaCount: 1
+
+  image:
+    repository: docker.elastic.co/kibana/kibana
+    pullPolicy: Always
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: "7.13.1"
+
+  # service:
+  #   type: ClusterIP
+  #   port: 5601
+
+  # resources:
+  #   # We usually recommend not to specify default resources and to leave this as a conscious
+  #   # choice for the user. This also increases chances charts run on environments with little
+  #   # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  #   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  #   limits:
+  #     cpu: 100m
+  #     memory: 128Mi
+  #   requests:
+  #     cpu: 100m
+  #     memory: 128Mi
+
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+
+# Fluentd
+fluentd:
+  # replicaCount: 1
+
+  image:
+    repository: ductn4/fluentd
+    pullPolicy: Always
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: "v1"
+
+  # service:
+  #   type: ClusterIP
+  #   port: 24224
+
+  # resources:
+  #   # We usually recommend not to specify default resources and to leave this as a conscious
+  #   # choice for the user. This also increases chances charts run on environments with little
+  #   # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  #   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  #   limits:
+  #     cpu: 100m
+  #     memory: 128Mi
+  #   requests:
+  #     cpu: 100m
+  #     memory: 128Mi
+
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
